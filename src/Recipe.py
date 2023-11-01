@@ -7,4 +7,5 @@ class Recipe:
         self.amtMilk = amtMilk
         self.amtSugar = amtSugar
         self.amtChocolate = amtChocolate
-        
+    
+    

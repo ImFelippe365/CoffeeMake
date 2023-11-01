@@ -8,16 +8,16 @@ class Inventory:
     
     def enoughIngredients(self, recipe):
         
-        if self.coffee < recipe.getAmtCoffee():
+        if self.coffee < recipe.amtCoffee:
             return False
         
-        if self.milk < recipe.getAmtMilk():
+        if self.milk < recipe.amtMilk:
             return False
         
-        if self.sugar < recipe.getAmtSugar():
+        if self.sugar < recipe.amtSugar:
             return False
         
-        if self.chocolate < recipe.getAmtChocolate():
+        if self.chocolate < recipe.amtChocolate:
             return False
         
         return True
@@ -25,10 +25,10 @@ class Inventory:
 
     def useIngredients(self, recipe):
         if self.enoughIngredients(recipe):
-            self.coffee += recipe.getAmtCoffee()
-            self.milk -= recipe.getAmtMilk()
-            self.sugar -= recipe.getAmtSugar()
-            self.chocolate -= recipe.getAmtChocolate()
+            self.coffee -= recipe.amtCoffee
+            self.milk -= recipe.amtMilk
+            self.sugar -= recipe.amtSugar
+            self.chocolate -= recipe.amtChocolate
 
             return True
         

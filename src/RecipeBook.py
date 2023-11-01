@@ -17,11 +17,15 @@ class RecipeBook:
         return True
 
     def removeRecipe(self, index):
-        if self.recipes[index]:
-            recipeName = self.recipes[index].name
-            del self.recipes[index]
+        try: 
+            if self.recipes[index]:
+                recipeName = self.recipes[index].name
+                del self.recipes[index]
 
-            return recipeName
+                return recipeName
+        except:
+            return False
+        
         return False
     
     def editRecipe(self, index, newRecipe):
